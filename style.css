@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html{
+    overflow: overlay;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+header{
+    background-color: #ffffff;
+    height: 15vh;
+    width: 100vw;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7vw;
+    z-index: 1000000;
+    box-shadow: 0px 10px 50px #dcdcdc;
+}
+.header-brand{
+    height: 70%;
+    width: auto;
+    max-width: 30vw;
+    object-fit: cover;
+}
+.header-brand img{
+    height: 100%;
+    width: 100%;
+}
+header nav{
+    display: flex;
+    max-width: 40vw;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+nav a{
+    position: relative;
+    text-decoration: none !important;
+    font-size: 16px;
+    color: rgb(92, 121, 240);
+    padding: 20px 5px;
+    margin: 2px;
+}
+nav a:hover{
+    font-weight: bold;
+    color: rgb(30, 71, 236);
+    
+}
+nav a.active{
+    font-weight: bold;
+}
+nav a::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #ff17c9;
+    position: absolute;
+    left: 0%;
+    bottom: 20px;
+    transition: all 0.7s;
+}
+nav a:hover::before{
+    width: 100%;
+
+}
+nav a ul{
+    /* height: 0px; */
+    position: absolute;
+    top: 100%;;
+    left: 10px;
+    background-color: #fff;
+    z-index: 20000;
+    padding: 20px 30px 10px;
+    border-radius: 10px;
+    transition: all 1s;
+    box-shadow: 0px 2px 5px #b6c6f8;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+nav a:hover ul{
+    opacity: 1;
+    transform: translate(0,0);
+    pointer-events: auto;
+}
+nav a ul li{
+    list-style: none;
+    padding: 10px 2px;
+    font-weight: normal;
+    width: 150px;
+    position: relative;
+}
+nav li:hover{
+    font-weight: bold;
+}
+nav li::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #ff17c9;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transition: all 0.7s;
+}
+nav li::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #ff17c9;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transition: all 0.7s;
+}
+nav li:hover::after{
+    width: 50%;
+}
+nav li:hover::before{
+    width: 50%;
+    left:0%
+}
+
+.banner{
+    width: 100vw;
+    height: auto;
+    margin: 10vh auto 30vh;
+    padding: 0 0.5vw;
+}
+
+#about{
+    width: 100vw;
+    height: 80vh;
+    background-color: #f9f9f9;
+    margin: 20vh auto;
+}
+.about-data{
+    width: 50%;
+    height: 100%;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 8%;
+}
+.about-data h3{
+    font-weight: bold;
+    word-spacing: 1px;
+    color: rgb(36, 36, 233);
+    border-bottom: 4px solid #f00fa9;
+    padding: 0 2px;
+}
